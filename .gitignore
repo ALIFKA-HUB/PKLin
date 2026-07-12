@@ -1,0 +1,13 @@
+# Ignore code subfolders (each has its own repository)
+/pklin-backend-api/
+/pklin-mobile/
+/pklin-web-admin/
+
+# Ignore local system/IDE settings
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
