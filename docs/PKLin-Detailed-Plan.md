@@ -26,25 +26,25 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
 ---
 ---
 
-## TUGAS 1.1: Database MySQL — Skema, Migrasi & Seeder
+## TUGAS 1.1: Database MySQL — Skema, Migrasi & Seeder ✅
 **Goal**: Membangun database `pklin_db` di MySQL lokal (XAMPP) dengan 3 tabel utama yang terelasi dan data dummy untuk pengujian.
 
 ### Sub-Tasks:
-- [ ] **1.1.1** Buat database `pklin_db` di DBeaver / MySQL.
-- [ ] **1.1.2** Install dependensi backend (`npm install`) termasuk Prisma CLI.
-- [ ] **1.1.3** Sinkronkan model Prisma (`schema.prisma`) dengan skema DDL dari spesifikasi:
+- [x] **1.1.1** Buat database `pklin_db` di DBeaver / MySQL.
+- [x] **1.1.2** Install dependensi backend (`npm install`) termasuk Prisma CLI.
+- [x] **1.1.3** Sinkronkan model Prisma (`schema.prisma`) dengan skema DDL dari spesifikasi:
   - Model `Industri` (nama, alamat, latitude, longitude, radius_meter)
   - Model `User` (role enum, nomor_induk, nama, tanggal_lahir, password hash, kelas, jurusan, no_whatsapp, FK id_industri, FK id_guru_pembimbing)
   - Model `JurnalAbsen` (tanggal, jam_datang/pulang, koordinat, foto, teks_jurnal, status_validasi enum, catatan_guru)
-- [ ] **1.1.4** Jalankan `npx prisma migrate dev` untuk membuat tabel di database lokal.
-- [ ] **1.1.5** Verifikasi struktur tabel di DBeaver (cek kolom, tipe data, relasi FK, index).
-- [ ] **1.1.6** Buat **seeder script** (`prisma/seed.js`) yang mengisi data dummy:
+- [x] **1.1.4** Jalankan `npx prisma migrate dev` untuk membuat tabel di database lokal.
+- [x] **1.1.5** Verifikasi struktur tabel di DBeaver (cek kolom, tipe data, relasi FK, index).
+- [x] **1.1.6** Buat **seeder script** (`prisma/seed.js`) yang mengisi data dummy:
   - 1 akun Admin (username: `adminpkl`, password hash dari `admin123`)
   - 2 akun Guru Pembimbing (NIP: `1112223334`, `2223334445`)
   - 4 akun Siswa (NISN: `0011223344`, `0022334455`, `0033445566`, `0044556677`) — masing-masing 2 siswa per guru
   - 2 data Industri dengan koordinat GPS nyata (contoh: kantor di kota Anda)
   - 3-5 data `JurnalAbsen` contoh (status: pending, approved, rejected)
-- [ ] **1.1.7** Jalankan seeder dan verifikasi data dummy tampil di DBeaver.
+- [x] **1.1.7** Jalankan seeder dan verifikasi data dummy tampil di DBeaver.
 
 **DoD**:
 - Tabel `users`, `industri`, `jurnal_absen` terbentuk di database `pklin_db` dengan relasi FK yang benar.
@@ -54,40 +54,40 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
 ---
 ---
 
-## TUGAS 1.2: Backend API — Autentikasi & Middleware
+## TUGAS 1.2: Backend API — Autentikasi & Middleware ✅
 **Goal**: Menyediakan sistem login berbasis JWT untuk 3 role (siswa, guru, admin) dengan middleware proteksi akses.
 
 ### Sub-Tasks — Kode Backend:
-- [ ] **1.2.1** Setup Express.js app (`src/app.js`): CORS, body-parser, JSON response, error handler global.
-- [ ] **1.2.2** Buat file konfigurasi environment (`src/config/env.js`): membaca JWT_SECRET, PORT, DATABASE_URL dari `.env`.
-- [ ] **1.2.3** Buat utility bcrypt (`src/utils/password.js`):
+- [x] **1.2.1** Setup Express.js app (`src/app.js`): CORS, body-parser, JSON response, error handler global.
+- [x] **1.2.2** Buat file konfigurasi environment (`src/config/env.js`): membaca JWT_SECRET, PORT, DATABASE_URL dari `.env`.
+- [x] **1.2.3** Buat utility bcrypt (`src/utils/password.js`):
   - Fungsi `hashPassword(plainText)` → hash bcrypt
   - Fungsi `comparePassword(plainText, hash)` → boolean
-- [ ] **1.2.4** Buat utility JWT (`src/utils/jwt.js`):
+- [x] **1.2.4** Buat utility JWT (`src/utils/jwt.js`):
   - Fungsi `generateToken(payload)` → token string (expiry 7 hari)
   - Fungsi `verifyToken(token)` → decoded payload / error
-- [ ] **1.2.5** Buat **Auth Middleware** (`src/middlewares/auth.js`):
+- [x] **1.2.5** Buat **Auth Middleware** (`src/middlewares/auth.js`):
   - `authenticate`: cek header `Authorization: Bearer {token}`, decode, dan suntikkan `req.user`.
   - `authorize(roles[])`: cek apakah `req.user.role` termasuk di daftar role yang diizinkan.
-- [ ] **1.2.6** Buat **endpoint `POST /api/login`** (`src/routes/auth.routes.js` + `src/controllers/auth.controller.js`):
+- [x] **1.2.6** Buat **endpoint `POST /api/login`** (`src/routes/auth.routes.js` + `src/controllers/auth.controller.js`):
   - Terima `nomor_induk` + `password`.
   - Cari user berdasarkan `nomor_induk` di database.
   - Cocokkan password dengan bcrypt.
   - Jika cocok: kembalikan `{ token, user: { id, role, nama, kelas } }`.
   - Jika tidak cocok: kembalikan `401 { message: "NISN/NIP or password is incorrect" }`.
-- [ ] **1.2.7** Buat **endpoint `POST /api/admin/login`**:
+- [x] **1.2.7** Buat **endpoint `POST /api/admin/login`**:
   - Terima `username` + `password`.
   - Cari user dengan `role = 'admin'` dan `nomor_induk = username`.
   - Response sama seperti `/login` dengan `role: "admin"`.
-- [ ] **1.2.8** Buat **file routing utama** (`src/routes/index.js`) yang menggabungkan semua router.
+- [x] **1.2.8** Buat **file routing utama** (`src/routes/index.js`) yang menggabungkan semua router.
 
 ### Sub-Tasks — Pengujian di Hoppscotch:
-- [ ] **1.2.9** Tes `POST /api/login` dengan NISN siswa dummy → harus dapat token.
-- [ ] **1.2.10** Tes `POST /api/login` dengan NIP guru dummy → harus dapat token.
-- [ ] **1.2.11** Tes `POST /api/login` dengan password salah → harus dapat `401`.
-- [ ] **1.2.12** Tes `POST /api/admin/login` dengan username admin → harus dapat token.
-- [ ] **1.2.13** Tes akses endpoint terproteksi tanpa token → harus dapat `401`.
-- [ ] **1.2.14** Tes akses endpoint guru menggunakan token siswa → harus dapat `403`.
+- [x] **1.2.9** Tes `POST /api/login` dengan NISN siswa dummy → harus dapat token.
+- [x] **1.2.10** Tes `POST /api/login` dengan NIP guru dummy → harus dapat token.
+- [x] **1.2.11** Tes `POST /api/login` dengan password salah → harus dapat `401`.
+- [x] **1.2.12** Tes `POST /api/admin/login` dengan username admin → harus dapat token.
+- [x] **1.2.13** Tes akses endpoint terproteksi tanpa token → harus dapat `401`.
+- [x] **1.2.14** Tes akses endpoint guru menggunakan token siswa → harus dapat `403`.
 
 **DoD**:
 - Semua 6 skenario tes di Hoppscotch menghasilkan response yang sesuai spesifikasi.
