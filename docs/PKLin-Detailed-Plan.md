@@ -414,9 +414,9 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
 **Goal**: Menginisialisasi proyek Flutter di folder `pklin-mobile` dengan arsitektur MVVM terstruktur rapi.
 
 ### Sub-Tasks:
-- [ ] **1.13.1** Jalankan `flutter create` di folder `pklin-mobile` (overwrite README lama).
-- [ ] **1.13.2** Hapus boilerplate bawaan Flutter (counter app).
-- [ ] **1.13.3** Buat struktur folder MVVM:
+- [x] **1.13.1** Jalankan `flutter create` di folder `pklin-mobile` (overwrite README lama).
+- [x] **1.13.2** Hapus boilerplate bawaan Flutter (counter app).
+- [x] **1.13.3** Buat struktur folder MVVM:
   ```
   lib/
   ├── models/          # Data classes (User, Industri, JurnalAbsen)
@@ -429,7 +429,7 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
   ├── utils/           # Helper (constants, validators)
   └── widgets/         # Komponen reusable (custom button, badge, card)
   ```
-- [ ] **1.13.4** Install dependensi di `pubspec.yaml`:
+- [x] **1.13.4** Install dependensi di `pubspec.yaml`:
   - `provider` (state management)
   - `dio` (HTTP client)
   - `flutter_secure_storage` (simpan token aman)
@@ -437,17 +437,16 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
   - `camera` (in-app camera)
   - `geolocator` (GPS)
   - `intl` (format tanggal/jam)
-- [ ] **1.13.5** Buat file `lib/utils/constants.dart`:
+- [x] **1.13.5** Buat file `lib/utils/constants.dart`:
   - Definisi warna tema (Ink Navy, Signal Amber, Verified Teal, Reject Rust, Paper Mist, Graphite).
   - Definisi base URL API (`http://10.0.2.2:8000/api` untuk emulator / IP lokal untuk HP fisik).
-- [ ] **1.13.6** Buat `lib/utils/theme.dart`:
+- [x] **1.13.6** Buat `lib/utils/theme.dart`:
   - ThemeData kustom: primaryColor Ink Navy, font Poppins, button theme Signal Amber.
 
 **DoD**:
 - Proyek Flutter berjalan di emulator/HP tanpa error.
 - Struktur folder MVVM terbentuk dengan benar.
 - Warna dan font tema resmi PKLin diterapkan secara global.
-
 ---
 ---
 
