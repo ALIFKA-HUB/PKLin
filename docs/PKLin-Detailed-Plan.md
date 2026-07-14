@@ -149,7 +149,7 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
 **Goal**: Menyediakan API untuk siswa melakukan clock-in (validasi GPS + upload foto), clock-out (jurnal + foto), dan melihat riwayat.
 
 ### Sub-Tasks — Kode Backend:
-- [ ] **1.4.1** Setup **Multer** middleware untuk menerima file upload (foto) dengan validasi:
+- [x] **1.4.1** Setup **Multer** middleware untuk menerima file upload (foto) dengan validasi:
   - Tipe file: hanya `jpg`, `jpeg`, `png`.
   - Ukuran maks: 5MB.
   - Penyimpanan: folder `uploads/` di server lokal (MVP).
