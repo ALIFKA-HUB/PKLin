@@ -226,42 +226,42 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
 **Goal**: Menginisialisasi proyek React + Vite di folder `pklin-web-admin` dan membangun kerangka layout dashboard bertema Modern Professional.
 
 ### Sub-Tasks — Setup Proyek:
-- [ ] **1.6.1** Hapus file `index.html` placeholder lama di folder `pklin-web-admin`.
-- [ ] **1.6.2** Inisialisasi proyek React + Vite (JavaScript) menggunakan `npx create-vite@latest`.
-- [ ] **1.6.3** Install dependensi tambahan: `react-router-dom`, `axios`.
-- [ ] **1.6.4** Setup Google Fonts **Poppins** (400, 500, 600, 700) dan **JetBrains Mono** (400, 500) via CSS `@import`.
+- [x] **1.6.1** Hapus file `index.html` placeholder lama di folder `pklin-web-admin`.
+- [x] **1.6.2** Inisialisasi proyek React + Vite (JavaScript) menggunakan `npx create-vite@latest`.
+- [x] **1.6.3** Install dependensi tambahan: `react-router-dom`, `axios`.
+- [x] **1.6.4** Setup Google Fonts **Poppins** (400, 500, 600, 700) dan **JetBrains Mono** (400, 500) via CSS `@import`.
 
 ### Sub-Tasks — Layout & Navigasi:
-- [ ] **1.6.5** Buat komponen `Sidebar` (lebar 240px, background Ink Navy `#1D2B3A`, teks Paper Mist):
+- [x] **1.6.5** Buat komponen `Sidebar` (lebar 240px, background Ink Navy `#1D2B3A`, teks Paper Mist):
   - Logo/nama app "PKLin" di atas.
   - Menu navigasi: Dashboard, Data Siswa, Data Guru, Data Industri, Penempatan, Rekap Kehadiran.
   - Item aktif: background sedikit lebih terang + indikator kiri Signal Amber.
-- [ ] **1.6.6** Buat komponen `Topbar` (background putih, border bawah tipis):
+- [x] **1.6.6** Buat komponen `Topbar` (Header) (background putih, border bawah tipis):
   - Nama admin yang login di kanan.
   - Tombol Logout.
-- [ ] **1.6.7** Buat komponen `MainLayout` yang menggabungkan Sidebar + Topbar + area konten utama.
-- [ ] **1.6.8** Setup **React Router** dengan rute:
+- [x] **1.6.7** Buat komponen `DashboardLayout` yang menggabungkan Sidebar + Topbar + area konten utama.
+- [x] **1.6.8** Setup **React Router** dengan rute:
   - `/login` — Halaman login admin
-  - `/dashboard` — Halaman utama
+  - `/` (dashboard) — Halaman utama
   - `/siswa` — Halaman kelola siswa
   - `/guru` — Halaman kelola guru
   - `/industri` — Halaman kelola industri
   - `/penempatan` — Halaman plot penempatan
   - `/rekap` — Halaman rekapitulasi kehadiran
-- [ ] **1.6.9** Buat **PrivateRoute** wrapper: jika tidak ada token di `localStorage`, redirect ke `/login`.
+- [x] **1.6.9** Buat **PrivateRoute** check di dalam `DashboardLayout`: jika tidak ada token di `localStorage`, redirect ke `/login`.
 
 ### Sub-Tasks — CSS Global Kustom:
-- [ ] **1.6.10** Buat file `src/styles/global.css`:
+- [x] **1.6.10** Buat file `src/index.css`:
   - CSS variables untuk seluruh token warna (Ink Navy, Amber, Teal, Rust, Paper Mist, Graphite).
-  - CSS variables untuk font: `--font-primary: 'Poppins'`, `--font-mono: 'JetBrains Mono'`.
-  - CSS variables untuk spacing (`--space-xs` sampai `--space-xl`) dan radius (`--radius-sm`, `--radius-md`).
+  - CSS variables untuk font: `--font-sans: 'Poppins'`, `--font-mono: 'JetBrains Mono'`.
   - Reset CSS dasar dan base styling (body background Paper Mist, teks Graphite).
-- [ ] **1.6.11** Buat file `src/styles/components.css`:
-  - Style dasar untuk tabel, tombol, input field, card, badge status (stempel digital).
+- [x] **1.6.11** Buat file `src/App.css`:
+  - Style dasar untuk tabel, tombol, input field, card, badge status, layout sidebar dan header.
 
 **DoD**:
 - Proyek React + Vite berjalan di `localhost:5173` tanpa error.
 - Layout dashboard responsif dengan sidebar, topbar, dan area konten.
+- Private routes terproteksi login.
 - Routing berfungsi: navigasi antar halaman lancar.
 - Seluruh elemen visual menggunakan font Poppins dan warna tema resmi.
 
