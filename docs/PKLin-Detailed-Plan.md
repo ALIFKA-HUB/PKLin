@@ -155,7 +155,7 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
   - Penyimpanan: folder `uploads/` di server lokal (MVP).
 - [x] **1.4.2** Buat utility **Haversine** (`src/utils/haversine.js`):
   - Fungsi `calculateDistance(lat1, lon1, lat2, lon2)` → jarak dalam meter.
-- [ ] **1.4.3** Buat **endpoint `GET /api/siswa/profil`**:
+- [x] **1.4.3** Buat **endpoint `GET /api/siswa/profil`**:
   - Ambil data profil siswa yang login, termasuk relasi `industri` (nama, alamat, koordinat) dan `guru_pembimbing` (nama, no_whatsapp).
 - [ ] **1.4.4** Buat **endpoint `POST /api/siswa/absen-datang`** (multipart/form-data):
   - Terima: `latitude`, `longitude`, `foto` (file).
