@@ -199,28 +199,24 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
 - [x] **1.5.1** Buat **endpoint `GET /api/guru/siswa-bimbingan`**:
   - Ambil semua siswa yang `id_guru_pembimbing` = id guru yang login.
   - Tampilkan nama, kelas, industri, dan jumlah jurnal pending.
-- [ ] **1.5.2** Buat **endpoint `GET /api/guru/jurnal/:id_siswa`**:
-  - Validasi: guru hanya bisa akses jurnal siswa yang memang bimbingannya (Row-Level Security).
-  - Kembalikan daftar jurnal siswa tersebut beserta status validasi.
-- [ ] **1.5.3** Buat **endpoint `GET /api/guru/jurnal/detail/:id_jurnal`**:
-  - Tampilkan detail lengkap satu jurnal (teks, foto bukti, foto datang, koordinat, status, catatan guru).
-  - Validasi: jurnal tersebut milik siswa bimbingan guru yang login.
-- [ ] **1.5.4** Buat **endpoint `POST /api/guru/validasi/:id_jurnal`**:
-  - Terima: `status_validasi` (hanya `approved` atau `rejected`), `catatan_guru` (wajib jika rejected).
-  - Validasi: jurnal tersebut milik siswa bimbingan guru yang login.
-  - Update status di database.
+- [x] **1.5.2** Buat **endpoint `GET /api/guru/siswa-bimbingan/:id/riwayat`**:
+  - Detail riwayat kehadiran siswa bimbingan tertentu.
+  - Query params opsional: `?bulan=7&tahun=2026`.
+- [ ] **1.5.3** Buat **endpoint `PUT /api/guru/jurnal/:id/validasi`**:
+  - Terima: `status_validasi` ('approved' / 'rejected'), `catatan_guru` (string, opsional).
+  - Cek apakah jurnal milik siswa bimbingannya (ambil `id_siswa` dari jurnal -> pastikan `id_guru_pembimbing` siswa tersebut = id guru yang login). Jika bukan → tolak `403`.
+  - Update `status_validasi` dan `catatan_guru` pada record `jurnal_absen`.
+  - Response: `{ message, status_validasi }`.
 
 ### Sub-Tasks — Pengujian di Hoppscotch:
-- [ ] **1.5.5** Tes `GET /api/guru/siswa-bimbingan` → verifikasi hanya siswa bimbingan guru yang muncul.
-- [ ] **1.5.6** Tes `GET /api/guru/jurnal/:id_siswa` dengan id siswa bimbingan → harus sukses.
-- [ ] **1.5.7** Tes `GET /api/guru/jurnal/:id_siswa` dengan id siswa **bukan** bimbingannya → harus `403`.
-- [ ] **1.5.8** Tes `POST /api/guru/validasi/:id_jurnal` approve → status berubah ke `approved`.
-- [ ] **1.5.9** Tes `POST /api/guru/validasi/:id_jurnal` reject tanpa catatan → harus `422`.
-- [ ] **1.5.10** Tes `POST /api/guru/validasi/:id_jurnal` reject dengan catatan → status berubah + catatan tersimpan.
+- [ ] **1.5.4** Tes `GET /api/guru/siswa-bimbingan` → verifikasi daftar siswa muncul.
+- [ ] **1.5.5** Tes `GET /api/guru/siswa-bimbingan/:id/riwayat` → verifikasi jurnal siswa bimbingan muncul.
+- [ ] **1.5.6** Tes `PUT /api/guru/jurnal/:id/validasi` dengan status 'approved'/'rejected' → verifikasi status ter-update di database.
+- [ ] **1.5.7** Tes `PUT /api/guru/jurnal/:id/validasi` untuk jurnal milik siswa dari guru lain → harus ditolak `403`.
 
 **DoD**:
-- 4 endpoint guru berfungsi dengan Row-Level Security yang ketat.
-- Semua 6 skenario tes Hoppscotch lulus.
+- 3 endpoint guru berfungsi dengan Row-Level Security yang ketat.
+- Semua 4 skenario tes Hoppscotch lulus.
 - Guru tidak bisa mengintip atau memodifikasi jurnal siswa di luar bimbingannya.
 
 ---
