@@ -291,39 +291,39 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
 ---
 
 ## TUGAS 1.8: Web Admin — Halaman Data Siswa (CRUD)
+## TUGAS 1.8: Web Admin — Halaman Data Siswa (CRUD)
 **Goal**: Halaman lengkap untuk mengelola data seluruh siswa PKL.
 
 ### Sub-Tasks — Tampilan Tabel:
-- [ ] **1.8.1** Buat komponen `SiswaPage` dengan tabel data siswa:
+- [x] **1.8.1** Buat komponen `SiswaPage` dengan tabel data siswa:
   - Kolom: No, Nama, NISN (font JetBrains Mono), Kelas, Jurusan, Industri, Guru Pembimbing, Aksi.
   - Data dimuat dari `GET /api/admin/siswa`.
   - Paginasi di bawah tabel (tombol halaman 1, 2, 3...).
-- [ ] **1.8.2** Buat fitur pencarian/filter:
+- [x] **1.8.2** Buat fitur pencarian/filter:
   - Dropdown filter Kelas.
   - Dropdown filter Jurusan.
   - Input pencarian by Nama/NISN.
 
 ### Sub-Tasks — Modal Form Tambah/Edit:
-- [ ] **1.8.3** Buat komponen `SiswaFormModal` (modal pop-up):
+- [x] **1.8.3** Buat komponen `SiswaFormModal` (modal pop-up):
   - Input: Nama, NISN, Tanggal Lahir (date picker), Kelas, Jurusan.
   - Dropdown: Pilih Industri (data dari `GET /api/admin/industri`).
   - Dropdown: Pilih Guru Pembimbing (data dari `GET /api/admin/guru`).
   - Tampilkan preview password yang akan di-generate (dari tanggal lahir + 3 digit NISN) agar admin bisa mengecek sebelum menyimpan.
   - Tombol Simpan (POST/PUT ke API).
-- [ ] **1.8.4** Buat validasi form frontend:
+- [x] **1.8.4** Buat validasi form frontend:
   - NISN wajib diisi dan unik.
   - Tanggal lahir wajib format valid.
   - Nama minimal 3 karakter.
 
 ### Sub-Tasks — Hapus Data:
-- [ ] **1.8.5** Buat dialog konfirmasi saat tombol Hapus ditekan (mencegah klik tak sengaja).
-- [ ] **1.8.6** Integrasi `DELETE /api/admin/siswa/:id` setelah konfirmasi.
+- [x] **1.8.5** Buat dialog konfirmasi saat tombol Hapus ditekan (mencegah klik tak sengaja).
+- [x] **1.8.6** Integrasi `DELETE /api/admin/siswa/:id` setelah konfirmasi.
 
 **DoD**:
 - Tabel siswa menampilkan data dengan paginasi dan filter yang berfungsi.
 - Form tambah/edit menampilkan preview password.
 - Operasi CRUD berhasil memanipulasi data di database secara instan (tabel auto-refresh setelah operasi).
-
 ---
 ---
 
