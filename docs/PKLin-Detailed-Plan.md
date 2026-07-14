@@ -169,7 +169,7 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
   - Cek apakah siswa sudah clock-in hari ini (harus sudah ada `jam_datang`).
   - Update record `jurnal_absen` hari ini: set `jam_pulang`, `teks_jurnal`, `foto_jurnal`, `status_validasi = 'pending'`.
   - Response: `{ message, jam_pulang, status_validasi: "pending" }`.
-- [ ] **1.4.6** Buat **endpoint `GET /api/siswa/riwayat`**:
+- [x] **1.4.6** Buat **endpoint `GET /api/siswa/riwayat`**:
   - Query params opsional: `?bulan=7&tahun=2026`.
   - Kembalikan array jurnal siswa yang login, urut tanggal terbaru di atas.
 
