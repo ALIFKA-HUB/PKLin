@@ -107,7 +107,7 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
 - [x] **1.3.5** `DELETE /api/admin/siswa/:id` — Hapus siswa (cascade delete jurnal_absen).
 
 ### Sub-Tasks — Endpoint Guru:
-- [ ] **1.3.6** `GET /api/admin/guru` — Daftar semua guru (termasuk jumlah siswa bimbingan masing-masing).
+- [x] **1.3.6** `GET /api/admin/guru` — Daftar semua guru (termasuk jumlah siswa bimbingan masing-masing).
 - [ ] **1.3.7** `GET /api/admin/guru/:id` — Detail satu guru.
 - [ ] **1.3.8** `POST /api/admin/guru` — Tambah guru baru (auto-generate password dari tanggal_lahir + 3 digit NIP).
 - [ ] **1.3.9** `PUT /api/admin/guru/:id` — Edit data guru.
