@@ -331,19 +331,18 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
 **Goal**: Halaman lengkap untuk mengelola data guru pembimbing.
 
 ### Sub-Tasks:
-- [ ] **1.9.1** Buat komponen `GuruPage` dengan tabel data guru:
+- [x] **1.9.1** Buat komponen `GuruPage` dengan tabel data guru:
   - Kolom: No, Nama, NIP (font JetBrains Mono), No. WhatsApp, Jumlah Siswa Bimbingan, Aksi.
   - Data dimuat dari `GET /api/admin/guru`.
-- [ ] **1.9.2** Buat komponen `GuruFormModal`:
+- [x] **1.9.2** Buat komponen `GuruFormModal`:
   - Input: Nama, NIP, Tanggal Lahir, No. WhatsApp.
   - Tampilkan preview password (dari tanggal lahir + 3 digit NIP).
-- [ ] **1.9.3** Validasi: NIP unik, No. WhatsApp format valid.
-- [ ] **1.9.4** Dialog konfirmasi hapus + integrasi DELETE API.
+- [x] **1.9.3** Validasi: NIP unik dan wajib 10 digit, No. WhatsApp format valid.
+- [x] **1.9.4** Dialog konfirmasi hapus + integrasi DELETE API.
 
 **DoD**:
 - CRUD guru berfungsi penuh.
 - Kolom "Jumlah Siswa Bimbingan" menghitung otomatis dari relasi database.
-
 ---
 ---
 
