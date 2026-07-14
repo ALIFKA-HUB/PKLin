@@ -157,7 +157,7 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
   - Fungsi `calculateDistance(lat1, lon1, lat2, lon2)` → jarak dalam meter.
 - [x] **1.4.3** Buat **endpoint `GET /api/siswa/profil`**:
   - Ambil data profil siswa yang login, termasuk relasi `industri` (nama, alamat, koordinat) dan `guru_pembimbing` (nama, no_whatsapp).
-- [ ] **1.4.4** Buat **endpoint `POST /api/siswa/absen-datang`** (multipart/form-data):
+- [x] **1.4.4** Buat **endpoint `POST /api/siswa/absen-datang`** (multipart/form-data):
   - Terima: `latitude`, `longitude`, `foto` (file).
   - Cek apakah siswa sudah absen hari ini (cegah duplikat per tanggal via `UNIQUE KEY`).
   - Ambil koordinat industri siswa dari database.
