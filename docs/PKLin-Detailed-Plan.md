@@ -202,7 +202,7 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
 - [x] **1.5.2** Buat **endpoint `GET /api/guru/siswa-bimbingan/:id/riwayat`**:
   - Detail riwayat kehadiran siswa bimbingan tertentu.
   - Query params opsional: `?bulan=7&tahun=2026`.
-- [ ] **1.5.3** Buat **endpoint `PUT /api/guru/jurnal/:id/validasi`**:
+- [x] **1.5.3** Buat **endpoint `PUT /api/guru/jurnal/:id/validasi`**:
   - Terima: `status_validasi` ('approved' / 'rejected'), `catatan_guru` (string, opsional).
   - Cek apakah jurnal milik siswa bimbingannya (ambil `id_siswa` dari jurnal -> pastikan `id_guru_pembimbing` siswa tersebut = id guru yang login). Jika bukan → tolak `403`.
   - Update `status_validasi` dan `catatan_guru` pada record `jurnal_absen`.
