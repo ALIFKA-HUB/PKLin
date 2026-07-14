@@ -350,18 +350,17 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
 **Goal**: Halaman lengkap untuk mengelola data tempat industri (perusahaan PKL) termasuk koordinat GPS.
 
 ### Sub-Tasks:
-- [ ] **1.10.1** Buat komponen `IndustriPage` dengan tabel data industri:
+- [x] **1.10.1** Buat komponen `IndustriPage` dengan tabel data industri:
   - Kolom: No, Nama Industri, Alamat, Latitude, Longitude (font JetBrains Mono), Radius (meter), Jumlah Siswa Ditempatkan, Aksi.
-- [ ] **1.10.2** Buat komponen `IndustriFormModal`:
+- [x] **1.10.2** Buat komponen `IndustriFormModal`:
   - Input: Nama Industri, Alamat (textarea), Latitude, Longitude, Radius Meter (default 50).
   - Tips: tampilkan catatan kecil "Buka Google Maps → klik kanan lokasi → salin koordinat".
-- [ ] **1.10.3** Validasi: Latitude/Longitude wajib isi dan format desimal valid, radius wajib angka positif.
-- [ ] **1.10.4** Dialog konfirmasi hapus + integrasi DELETE API.
+- [x] **1.10.3** Validasi: Latitude/Longitude wajib isi dan format desimal valid, radius wajib angka positif.
+- [x] **1.10.4** Dialog konfirmasi hapus + integrasi DELETE API.
 
 **DoD**:
 - CRUD industri berfungsi penuh dengan validasi koordinat.
 - Kolom "Jumlah Siswa" menghitung otomatis dari relasi database.
-
 ---
 ---
 
