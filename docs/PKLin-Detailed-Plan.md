@@ -124,7 +124,7 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
 - [x] **1.3.16** `PUT /api/admin/siswa/:id/penempatan` — Assign siswa ke industri dan guru pembimbing sekaligus (update `id_industri` + `id_guru_pembimbing`).
 
 ### Sub-Tasks — Endpoint Rekap Kehadiran:
-- [ ] **1.3.17** `GET /api/admin/rekap` — Rekap kehadiran seluruh siswa (filter bulan, tahun, kelas). Menghitung `total_hadir`, `total_pending`, `total_rejected` per siswa.
+- [x] **1.3.17** `GET /api/admin/rekap` — Rekap kehadiran seluruh siswa (filter bulan, tahun, kelas). Menghitung `total_hadir`, `total_pending`, `total_rejected` per siswa.
 - [ ] **1.3.18** `GET /api/admin/dashboard` — Statistik ringkas: total siswa aktif, total hadir hari ini, total jurnal pending approval.
 
 ### Sub-Tasks — Pengujian di Hoppscotch:
