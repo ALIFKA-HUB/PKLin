@@ -386,19 +386,19 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
 **Goal**: Halaman utama dashboard berisi statistik ringkas dan halaman rekap kehadiran bulanan.
 
 ### Sub-Tasks — Dashboard:
-- [ ] **1.12.1** Buat komponen `DashboardPage` dengan 4 **stat card** di atas:
+- [x] **1.12.1** Buat komponen `DashboardPage` dengan 4 **stat card** di atas:
   - Card 1: Total Siswa Aktif PKL (ikon user).
   - Card 2: Total Hadir Hari Ini (ikon checklist, warna Teal).
   - Card 3: Total Jurnal Pending (ikon jam pasir, warna Amber).
   - Card 4: Total Jurnal Ditolak Bulan Ini (ikon silang, warna Rust).
-- [ ] **1.12.2** Data stat card dimuat dari `GET /api/admin/dashboard`.
+- [x] **1.12.2** Data stat card dimuat dari `GET /api/admin/dashboard`.
 
 ### Sub-Tasks — Halaman Rekap:
-- [ ] **1.12.3** Buat komponen `RekapPage` dengan tabel rekapitulasi:
+- [x] **1.12.3** Buat komponen `RekapPage` dengan tabel rekapitulasi:
   - Kolom: No, Nama, Kelas, Total Hadir, Total Pending, Total Ditolak.
   - Data dimuat dari `GET /api/admin/rekap`.
-- [ ] **1.12.4** Filter: Dropdown bulan + Dropdown tahun + Dropdown kelas.
-- [ ] **1.12.5** Implementasi **badge stempel digital** pada kolom status:
+- [x] **1.12.4** Filter: Dropdown bulan + Dropdown tahun + Dropdown kelas.
+- [x] **1.12.5** Implementasi **badge stempel digital** pada kolom status:
   - Badge `Approved`: border dashed Verified Teal, rotasi -4°, font JetBrains Mono uppercase.
   - Badge `Pending`: border dashed Signal Amber.
   - Badge `Rejected`: border dashed Reject Rust.
@@ -407,7 +407,6 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
 - Statistik dashboard terhitung otomatis dan akurat dari database.
 - Badge stempel digital muncul konsisten di tabel rekap.
 - Filter bulan/tahun/kelas berfungsi memperbarui data tabel.
-
 ---
 ---
 
