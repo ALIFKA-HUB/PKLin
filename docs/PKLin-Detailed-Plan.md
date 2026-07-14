@@ -269,25 +269,24 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
 ---
 
 ## TUGAS 1.7: Web Admin — Halaman Login Admin
-**Goal**: Membangun halaman login web admin yang terhubung ke API `/admin/login`.
+**Goal**: Membangun halaman login web admin yang terhubung ke API `/api/login`.
 
 ### Sub-Tasks:
-- [ ] **1.7.1** Desain halaman login:
-  - Background Paper Mist, card login di tengah layar (shadow halus).
+- [x] **1.7.1** Desain halaman login:
+  - Background Ink Navy & Paper Mist, card login di tengah layar (shadow halus).
   - Logo/nama "PKLin" di atas card.
-  - Input: Username, Password.
-  - Tombol Login (background Signal Amber, teks Graphite, font Poppins weight 500).
+  - Input: Username/Nomor Induk, Password.
+  - Tombol Login (background Signal Amber, teks putih, font Poppins weight 600).
   - Pesan error merah jika login gagal.
-- [ ] **1.7.2** Integrasi API `POST /api/admin/login` menggunakan Axios.
-- [ ] **1.7.3** Simpan token ke `localStorage` setelah login berhasil.
-- [ ] **1.7.4** Redirect ke `/dashboard` setelah login berhasil.
-- [ ] **1.7.5** Jika sudah login (token ada), langsung redirect ke `/dashboard` saat membuka `/login`.
+- [x] **1.7.2** Integrasi API `POST /api/login` menggunakan Axios.
+- [x] **1.7.3** Simpan token ke `localStorage` setelah login berhasil.
+- [x] **1.7.4** Redirect ke `/` (dashboard) setelah login berhasil.
+- [x] **1.7.5** Jika sudah login (token ada), langsung redirect ke `/` saat membuka `/login`.
 
 **DoD**:
 - Admin berhasil login dan diarahkan ke dashboard.
 - Token tersimpan di browser.
 - Percobaan login dengan password salah menampilkan pesan error visual yang jelas.
-
 ---
 ---
 
