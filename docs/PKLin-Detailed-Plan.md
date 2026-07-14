@@ -121,7 +121,7 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
 - [x] **1.3.15** `DELETE /api/admin/industri/:id` — Hapus industri (cascade: set `id_industri = NULL` di semua siswa terkait).
 
 ### Sub-Tasks — Endpoint Plot Penempatan:
-- [ ] **1.3.16** `PUT /api/admin/siswa/:id/penempatan` — Assign siswa ke industri dan guru pembimbing sekaligus (update `id_industri` + `id_guru_pembimbing`).
+- [x] **1.3.16** `PUT /api/admin/siswa/:id/penempatan` — Assign siswa ke industri dan guru pembimbing sekaligus (update `id_industri` + `id_guru_pembimbing`).
 
 ### Sub-Tasks — Endpoint Rekap Kehadiran:
 - [ ] **1.3.17** `GET /api/admin/rekap` — Rekap kehadiran seluruh siswa (filter bulan, tahun, kelas). Menghitung `total_hadir`, `total_pending`, `total_rejected` per siswa.
