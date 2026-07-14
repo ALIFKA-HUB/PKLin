@@ -368,18 +368,17 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
 **Goal**: Halaman khusus untuk mempermudah proses assign siswa ke industri dan guru pembimbing secara massal.
 
 ### Sub-Tasks:
-- [ ] **1.11.1** Buat komponen `PenempatanPage`:
+- [x] **1.11.1** Buat komponen `PenempatanPage`:
   - Tabel daftar siswa yang **belum ditempatkan** (id_industri atau id_guru_pembimbing masih NULL).
   - Tabel daftar siswa yang **sudah ditempatkan**.
-- [ ] **1.11.2** Buat fitur assign cepat per siswa:
+- [x] **1.11.2** Buat fitur assign cepat per siswa:
   - Dropdown pilih industri + dropdown pilih guru di samping nama siswa.
   - Tombol "Simpan Penempatan" yang memanggil `PUT /api/admin/siswa/:id/penempatan`.
-- [ ] **1.11.3** Indikator visual: siswa yang sudah lengkap penempatannya ditandai warna hijau (Verified Teal), yang belum ditandai kuning (Signal Amber).
+- [x] **1.11.3** Indikator visual: siswa yang sudah lengkap penempatannya ditandai warna hijau (Verified Teal), yang belum ditandai kuning (Signal Amber).
 
 **DoD**:
 - Admin dapat melihat dengan jelas siswa mana yang belum ditempatkan.
 - Proses penempatan memperbarui database instan tanpa perlu reload halaman.
-
 ---
 ---
 
