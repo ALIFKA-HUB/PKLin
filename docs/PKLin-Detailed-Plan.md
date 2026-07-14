@@ -196,7 +196,7 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
 **Goal**: Menyediakan API bagi guru untuk melihat daftar siswa bimbingan, membaca jurnal, dan melakukan approve/reject.
 
 ### Sub-Tasks — Kode Backend:
-- [ ] **1.5.1** Buat **endpoint `GET /api/guru/siswa-bimbingan`**:
+- [x] **1.5.1** Buat **endpoint `GET /api/guru/siswa-bimbingan`**:
   - Ambil semua siswa yang `id_guru_pembimbing` = id guru yang login.
   - Tampilkan nama, kelas, industri, dan jumlah jurnal pending.
 - [ ] **1.5.2** Buat **endpoint `GET /api/guru/jurnal/:id_siswa`**:
