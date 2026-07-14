@@ -115,7 +115,7 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
 
 ### Sub-Tasks — Endpoint Industri:
 - [x] **1.3.11** `GET /api/admin/industri` — Daftar semua industri.
-- [ ] **1.3.12** `GET /api/admin/industri/:id` — Detail satu industri.
+- [x] **1.3.12** `GET /api/admin/industri/:id` — Detail satu industri.
 - [ ] **1.3.13** `POST /api/admin/industri` — Tambah industri baru (validasi latitude/longitude wajib isi).
 - [ ] **1.3.14** `PUT /api/admin/industri/:id` — Edit industri (termasuk koordinat & radius).
 - [ ] **1.3.15** `DELETE /api/admin/industri/:id` — Hapus industri (cascade: set `id_industri = NULL` di semua siswa terkait).
