@@ -164,7 +164,7 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
   - Hitung jarak dengan Haversine: jika > `radius_meter` → tolak `422`.
   - Jika dalam radius: simpan foto, buat record `jurnal_absen` dengan `jam_datang` = sekarang.
   - Response: `{ message, jam_datang, dalam_radius: true }`.
-- [ ] **1.4.5** Buat **endpoint `POST /api/siswa/absen-pulang`** (multipart/form-data):
+- [x] **1.4.5** Buat **endpoint `POST /api/siswa/absen-pulang`** (multipart/form-data):
   - Terima: `teks_jurnal` (min 10 karakter), `foto_jurnal` (file).
   - Cek apakah siswa sudah clock-in hari ini (harus sudah ada `jam_datang`).
   - Update record `jurnal_absen` hari ini: set `jam_pulang`, `teks_jurnal`, `foto_jurnal`, `status_validasi = 'pending'`.
