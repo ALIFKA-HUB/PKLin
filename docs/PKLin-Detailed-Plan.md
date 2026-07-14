@@ -125,7 +125,7 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
 
 ### Sub-Tasks — Endpoint Rekap Kehadiran:
 - [x] **1.3.17** `GET /api/admin/rekap` — Rekap kehadiran seluruh siswa (filter bulan, tahun, kelas). Menghitung `total_hadir`, `total_pending`, `total_rejected` per siswa.
-- [ ] **1.3.18** `GET /api/admin/dashboard` — Statistik ringkas: total siswa aktif, total hadir hari ini, total jurnal pending approval.
+- [x] **1.3.18** `GET /api/admin/dashboard` — Statistik ringkas: total siswa aktif, total hadir hari ini, total jurnal pending approval.
 
 ### Sub-Tasks — Pengujian di Hoppscotch:
 - [ ] **1.3.19** Tes CRUD siswa (Create → Read → Update → Delete) → 4 request berurutan.
