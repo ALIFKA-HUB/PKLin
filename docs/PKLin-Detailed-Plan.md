@@ -523,20 +523,20 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
 **Goal**: Implementasi alur clock-in siswa menggunakan kamera in-app dan validasi lokasi GPS.
 
 ### Sub-Tasks:
-- [ ] **1.16.1** Buat `views/siswa/camera_screen.dart`:
+- [x] **1.16.1** Buat `views/siswa/camera_screen.dart`:
   - Menampilkan preview kamera langsung (hanya kamera belakang/depan, tanpa opsi galeri).
   - Tombol Capture di tengah bawah.
   - Preview hasil foto setelah capture (dengan tombol Retake dan Confirm).
-- [ ] **1.16.2** Buat `services/location_service.dart`:
+- [x] **1.16.2** Buat `services/location_service.dart`:
   - Fungsi `getCurrentPosition()` → ambil koordinat GPS perangkat.
   - Handle permission GPS (minta izin jika belum, tampilkan pesan jika ditolak).
-- [ ] **1.16.3** Buat `views/siswa/clock_in_screen.dart` (alur lengkap):
+- [x] **1.16.3** Buat `views/siswa/clock_in_screen.dart` (alur lengkap):
   - Langkah 1: Ambil koordinat GPS otomatis saat layar dibuka.
   - Langkah 2: Buka kamera in-app → siswa mengambil foto selfie/bukti kehadiran.
   - Langkah 3: Tampilkan ringkasan konfirmasi (foto + koordinat + jarak estimasi).
   - Langkah 4: Kirim data ke `POST /api/siswa/absen-datang`.
   - Langkah 5: Tampilkan hasil (sukses → kembali ke dashboard / gagal → pesan error dengan jarak).
-- [ ] **1.16.4** Handling error:
+- [x] **1.16.4** Handling error:
   - GPS mati → tampilkan dialog "Aktifkan GPS".
   - Izin kamera ditolak → tampilkan penjelasan dan tombol buka pengaturan HP.
   - Di luar radius → tampilkan pesan jelas beserta jarak sebenarnya.
