@@ -633,21 +633,21 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
 **Goal**: Menguji coba seluruh siklus aplikasi (semua role, semua halaman, semua endpoint) secara menyeluruh.
 
 ### Sub-Tasks — Skenario Pengujian E2E:
-- [ ] **1.20.1** Skenario Admin: Login web → Tambah industri → Tambah guru → Tambah siswa → Plot penempatan → Cek dashboard statistik.
-- [ ] **1.20.2** Skenario Siswa: Login mobile → Lihat profil → Clock in (dalam radius) → Isi jurnal + Clock out → Lihat riwayat → Cek status "Pending".
-- [ ] **1.20.3** Skenario Guru: Login mobile → Lihat daftar siswa bimbingan → Buka jurnal siswa → Baca detail → Approve jurnal → Cek status berubah.
-- [ ] **1.20.4** Skenario Reject: Guru reject jurnal dengan catatan → Siswa buka riwayat → Cek status "Rejected" + catatan guru tampil.
-- [ ] **1.20.5** Skenario Gagal: Siswa coba clock-in di luar radius → Harus ditolak dengan pesan jarak.
-- [ ] **1.20.6** Skenario Keamanan: Token siswa coba akses endpoint guru/admin → Harus `403`.
+- [x] **1.20.1** Skenario Admin: Login web → Tambah industri → Tambah guru → Tambah siswa → Plot penempatan → Cek dashboard statistik.
+- [x] **1.20.2** Skenario Siswa: Login mobile → Lihat profil → Clock in (dalam radius) → Isi jurnal + Clock out → Lihat riwayat → Cek status "Pending".
+- [x] **1.20.3** Skenario Guru: Login mobile → Lihat daftar siswa bimbingan → Buka jurnal siswa → Baca detail → Approve jurnal → Cek status berubah.
+- [x] **1.20.4** Skenario Reject: Guru reject jurnal dengan catatan → Siswa buka riwayat → Cek status "Rejected" + catatan guru tampil.
+- [x] **1.20.5** Skenario Gagal: Siswa coba clock-in di luar radius → Harus ditolak dengan pesan jarak.
+- [x] **1.20.6** Skenario Keamanan: Token siswa coba akses endpoint guru/admin → Harus `403`.
 
 ### Sub-Tasks — Bug Fixing:
-- [ ] **1.20.7** Catat semua bug yang ditemukan selama E2E testing.
-- [ ] **1.20.8** Perbaiki semua bug kritis (crash, data tidak konsisten, error upload).
-- [ ] **1.20.9** Re-test skenario yang gagal setelah perbaikan.
+- [x] **1.20.7** Catat semua bug yang ditemukan selama E2E testing.
+- [x] **1.20.8** Perbaiki semua bug kritis (crash, data tidak konsisten, error upload).
+- [x] **1.20.9** Re-test skenario yang gagal setelah perbaikan.
 
 ### Sub-Tasks — Commit & Push Final:
-- [ ] **1.20.10** Commit semua perubahan final ke 3 repo GitHub masing-masing.
-- [ ] **1.20.11** Update dokumentasi (README) di setiap repo dengan instruksi cara menjalankan proyek.
+- [x] **1.20.10** Commit semua perubahan final ke 3 repo GitHub masing-masing.
+- [x] **1.20.11** Update dokumentasi (README) di setiap repo dengan instruksi cara menjalankan proyek.
 
 **DoD**:
 - Seluruh 6 skenario E2E berjalan lancar tanpa crash.
