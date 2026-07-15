@@ -489,23 +489,23 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
 **Goal**: Membangun dashboard utama siswa dan halaman profil penempatan PKL.
 
 ### Sub-Tasks — Dashboard Siswa:
-- [ ] **1.15.1** Buat `views/siswa/siswa_dashboard_screen.dart`:
+- [x] **1.15.1** Buat `views/siswa/siswa_dashboard_screen.dart`:
   - Header: Salam "Halo, {nama}!" + kelas siswa.
   - **Tombol besar Clock In** (FAB menonjol, background Signal Amber, ikon kamera) — hanya muncul jika belum clock-in hari ini.
   - **Tombol Clock Out / Isi Jurnal** — muncul setelah sudah clock-in tapi belum clock-out.
   - Kartu status hari ini: jam datang, jam pulang, status validasi (menggunakan badge stempel digital).
   - Ringkasan statistik bulan ini: total hadir, total pending, total approved.
-- [ ] **1.15.2** Logika kondisional tombol berdasarkan status absensi hari ini (belum absen / sudah datang / sudah pulang).
+- [x] **1.15.2** Logika kondisional tombol berdasarkan status absensi hari ini (belum absen / sudah datang / sudah pulang).
 
 ### Sub-Tasks — Halaman Profil:
-- [ ] **1.15.3** Buat `views/siswa/siswa_profil_screen.dart`:
+- [x] **1.15.3** Buat `views/siswa/siswa_profil_screen.dart`:
   - Data dari `GET /api/siswa/profil`.
   - Tampilkan: Nama, NISN (font mono), Kelas, Jurusan.
   - Tampilkan: Nama Industri, Alamat, Guru Pembimbing, No. WhatsApp guru.
   - Tombol WhatsApp guru (membuka WA langsung ke nomor tersebut via deep link).
 
 ### Sub-Tasks — Bottom Navigation:
-- [ ] **1.15.4** Buat `BottomNavigationBar` siswa dengan 4 tab:
+- [x] **1.15.4** Buat `BottomNavigationBar` siswa dengan 4 tab:
   - 🏠 Beranda (Dashboard)
   - 📋 Riwayat (Jurnal/Absensi)
   - 👤 Profil
