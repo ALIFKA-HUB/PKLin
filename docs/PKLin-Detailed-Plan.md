@@ -597,28 +597,28 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
 **Goal**: Membangun dashboard guru dan halaman monitoring/validasi jurnal siswa bimbingan.
 
 ### Sub-Tasks — Dashboard Guru:
-- [ ] **1.19.1** Buat `views/guru/guru_dashboard_screen.dart`:
+- [x] **1.19.1** Buat `views/guru/guru_dashboard_screen.dart`:
   - Header: Salam "Selamat {pagi/siang/sore}, {nama}!"
   - Stat card: Jumlah siswa bimbingan, Jumlah jurnal pending hari ini.
   - Daftar siswa bimbingan (card berisi nama, kelas, industri, dan jumlah jurnal pending).
-- [ ] **1.19.2** Buat `BottomNavigationBar` guru dengan 3 tab:
+- [x] **1.19.2** Buat `BottomNavigationBar` guru dengan 3 tab:
   - 🏠 Beranda (Dashboard)
   - 👤 Profil (data guru)
   - ⚙️ Pengaturan (logout)
 
 ### Sub-Tasks — Halaman Daftar Jurnal Per Siswa:
-- [ ] **1.19.3** Buat `views/guru/jurnal_siswa_screen.dart`:
+- [x] **1.19.3** Buat `views/guru/jurnal_siswa_screen.dart`:
   - Data dari `GET /api/guru/jurnal/:id_siswa`.
   - Daftar card jurnal per hari (mirip tampilan riwayat siswa).
   - Badge status berwarna (Teal/Amber/Rust).
 
 ### Sub-Tasks — Halaman Detail & Validasi:
-- [ ] **1.19.4** Buat `views/guru/detail_validasi_screen.dart`:
+- [x] **1.19.4** Buat `views/guru/detail_validasi_screen.dart`:
   - Tampilkan detail jurnal: teks lengkap, foto datang (bukti kehadiran), foto jurnal (bukti aktivitas), koordinat GPS, tanggal/jam.
   - **Tombol Setujui** (background Verified Teal, icon centang).
   - **Tombol Tolak** (background Reject Rust, icon silang) → muncul input alasan penolakan.
   - Setelah tombol ditekan: kirim ke `POST /api/guru/validasi/:id_jurnal`, kembali ke daftar jurnal.
-- [ ] **1.19.5** Konfirmasi dialog sebelum approve/reject untuk mencegah klik tidak sengaja.
+- [x] **1.19.5** Konfirmasi dialog sebelum approve/reject untuk mencegah klik tidak sengaja.
 
 **DoD**:
 - Guru hanya melihat siswa bimbingannya sendiri.
