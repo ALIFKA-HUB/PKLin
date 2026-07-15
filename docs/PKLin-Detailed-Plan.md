@@ -454,7 +454,7 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
 **Goal**: Membangun halaman login untuk siswa dan guru (single screen) dengan penyimpanan sesi aman.
 
 ### Sub-Tasks — UI Login:
-- [ ] **1.14.1** Buat `views/auth/login_screen.dart`:
+- [x] **1.14.1** Buat `views/auth/login_screen.dart`:
   - Background: gradient halus Ink Navy → Paper Mist.
   - Logo/nama "PKLin" di bagian atas (font Poppins, weight 700, ukuran besar).
   - Input: Nomor Induk (NISN/NIP), Password.
@@ -463,18 +463,18 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
   - Pesan error merah di bawah form jika login gagal.
 
 ### Sub-Tasks — Logika Auth:
-- [ ] **1.14.2** Buat `services/auth_service.dart`:
+- [x] **1.14.2** Buat `services/auth_service.dart`:
   - Fungsi `login(nomorInduk, password)` → panggil `POST /api/login`.
   - Return objek User atau throw error.
-- [ ] **1.14.3** Buat `viewmodels/auth_viewmodel.dart`:
+- [x] **1.14.3** Buat `viewmodels/auth_viewmodel.dart`:
   - State: `isLoading`, `errorMessage`, `currentUser`.
   - Method: `login()`, `logout()`, `checkSession()`.
-- [ ] **1.14.4** Buat `models/user_model.dart`:
+- [x] **1.14.4** Buat `models/user_model.dart`:
   - Properties: `id`, `role`, `nama`, `kelas`, `token`.
   - Factory constructor dari JSON response API.
-- [ ] **1.14.5** Simpan token ke `FlutterSecureStorage` setelah login berhasil.
-- [ ] **1.14.6** Implementasi **auto-login**: saat aplikasi dibuka, cek apakah ada token tersimpan → langsung masuk ke dashboard tanpa perlu login ulang.
-- [ ] **1.14.7** Implementasi routing berdasarkan role:
+- [x] **1.14.5** Simpan token ke `FlutterSecureStorage` setelah login berhasil.
+- [x] **1.14.6** Implementasi **auto-login**: saat aplikasi dibuka, cek apakah ada token tersimpan → langsung masuk ke dashboard tanpa perlu login ulang.
+- [x] **1.14.7** Implementasi routing berdasarkan role:
   - `role == 'siswa'` → navigasi ke `SiswaDashboardScreen`.
   - `role == 'guru'` → navigasi ke `GuruDashboardScreen`.
 
@@ -483,8 +483,6 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
 - Login sukses menyimpan token dan mengarahkan ke dashboard yang sesuai role.
 - Auto-login berfungsi saat aplikasi ditutup dan dibuka kembali.
 - Login gagal menampilkan pesan error yang jelas.
-
----
 ---
 
 ## TUGAS 1.15: Flutter Mobile — Halaman Dashboard & Profil Siswa
