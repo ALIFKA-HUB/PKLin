@@ -553,14 +553,14 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
 **Goal**: Implementasi alur clock-out siswa disertai pengisian teks jurnal dan foto bukti aktivitas.
 
 ### Sub-Tasks:
-- [ ] **1.17.1** Buat `views/siswa/clock_out_screen.dart`:
+- [x] **1.17.1** Buat `views/siswa/clock_out_screen.dart`:
   - Input teks jurnal (TextField multi-line, placeholder: "Tuliskan kegiatan hari ini...").
   - Tombol ambil foto aktivitas (buka kamera in-app, tanpa galeri).
   - Preview foto yang diambil (dengan tombol retake).
   - Validasi frontend: teks minimal 10 karakter, foto wajib ada.
   - Tombol Submit: kirim ke `POST /api/siswa/absen-pulang`.
-- [ ] **1.17.2** Tampilkan loading indicator selama proses upload.
-- [ ] **1.17.3** Setelah berhasil: kembali ke dashboard, status berubah ke "Menunggu Validasi" (badge stempel Amber).
+- [x] **1.17.2** Tampilkan loading indicator selama proses upload.
+- [x] **1.17.3** Setelah berhasil: kembali ke dashboard, status berubah ke "Menunggu Validasi" (badge stempel Amber).
 
 **DoD**:
 - Siswa tidak bisa submit tanpa mengisi jurnal ≥10 karakter dan mengambil foto.
@@ -573,7 +573,7 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
 **Goal**: Menampilkan riwayat jurnal dan absensi siswa dalam format daftar kronologis.
 
 ### Sub-Tasks:
-- [ ] **1.18.1** Buat `views/siswa/riwayat_screen.dart`:
+- [x] **1.18.1** Buat `views/siswa/riwayat_screen.dart`:
   - Data dari `GET /api/siswa/riwayat`.
   - Daftar card jurnal per hari, urut tanggal terbaru di atas.
   - Setiap card menampilkan:
@@ -581,8 +581,8 @@ Dokumen ini memuat **seluruh tugas, sub-tugas, halaman UI, endpoint API, dan kri
     - Jam datang — Jam pulang.
     - Teks jurnal (dipenggal 2 baris dengan "Lihat selengkapnya...").
     - Badge stempel status validasi (Approved/Pending/Rejected).
-- [ ] **1.18.2** Buat filter bulan di atas daftar (dropdown atau pill selector).
-- [ ] **1.18.3** Buat `views/siswa/detail_jurnal_screen.dart`:
+- [x] **1.18.2** Buat filter bulan di atas daftar (dropdown atau pill selector).
+- [x] **1.18.3** Buat `views/siswa/detail_jurnal_screen.dart`:
   - Tampilkan detail lengkap satu jurnal: teks penuh, foto datang, foto jurnal, jam datang/pulang, catatan guru (jika ditolak).
 
 **DoD**:
